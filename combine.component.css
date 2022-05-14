@@ -1,0 +1,23 @@
+.spacer{
+    flex: auto ;
+  }
+  .searchbar
+  {
+  
+    position: relative;
+    margin-left: 300px;
+  }
+
+  #bone{
+    margin-left: 20px;
+  }
+
+  a{
+    margin-left: 35px;
+  }
+
+  #vedioicon
+  {
+    margin-left: -30px;
+    margin-top: 20px;
+  }

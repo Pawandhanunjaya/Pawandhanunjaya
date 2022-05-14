@@ -1,0 +1,50 @@
+<div [hidden]="option">
+<mat-toolbar color="accent" id="tool" >
+    <button mat-flat-button color="accent" (click)="opened=!opened"><mat-icon>menu</mat-icon></button>
+    <span>ViewTube</span>
+    <div class="searchbar">
+      <mat-form-field class="example-form-field" style="margin-left: 120px;">
+        <input matInput type="text" placeholder="Search">
+         <button mat-button matSuffix mat-icon-button aria-label="Clear">
+           <mat-icon>close</mat-icon>
+         </button>
+      </mat-form-field>
+      <button mat-flat-button color="accent"> <mat-icon>search</mat-icon></button>
+      <button mat-flat-button color="accent"><mat-icon>mic</mat-icon></button>
+    </div>
+    <div class="spacer"></div>
+    
+    <button mat-flat-button color="accent"><mat-icon>notifications</mat-icon></button>
+    <button mat-flat-button color="accent"><a routerLink="/sidenav"><mat-icon (click)="required()" id="vedioicon">videocam</mat-icon></a></button>
+    <button mat-flat-button color="accent"><mat-icon>grid_on</mat-icon></button>
+    <button mat-flat-button color="accent"><mat-icon>perm_identity</mat-icon></button>
+    </mat-toolbar>
+    <br>
+
+
+<mat-sidenav-container class="example-container" style="height: 100%; margin-top: -20px; background-color:dimgray" id="sidenav">
+  
+<mat-sidenav mode="side" [opened]="opened" style="width: 200px; background-color: gray;">
+    <mat-nav-list >
+        <a mat-list-item>Home</a>
+        <a mat-list-item>Contact Us</a>
+        <a mat-list-item>Services</a>
+        <a mat-list-item>SingUp</a>
+        <a mat-list-item>Help</a>
+        <a mat-list-item>Report</a>
+       
+    </mat-nav-list>
+</mat-sidenav>
+
+<mat-sidenav-content>
+    <app-chips-bar></app-chips-bar>
+    <app-video-content></app-video-content>
+</mat-sidenav-content>
+
+</mat-sidenav-container>
+</div>
+
+<!-- RouterOutlet element -->
+<div *ngIf="option">
+<router-outlet></router-outlet>
+</div>
